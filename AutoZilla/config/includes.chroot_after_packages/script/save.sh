@@ -5,7 +5,7 @@ sudo umount /home/partimag
 date=$(date +"%d-%m-%Y")
 
 . /home/user/restore.cfg
-. /mnt/usb/preconfig.cfg
+. /home/user/preconfig.cfg
 
 echo "date=$date" >> restore.cfg
 

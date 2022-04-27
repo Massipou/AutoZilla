@@ -25,5 +25,5 @@ lb config noauto \
 	--linux-package "linux-image linux-headers" \
 	--firmware-binary "true" \
 	--firmware-chroot "true" \
-	--bootappend-live "boot=live components locales=fr_FR.UTF-8 keyboard-layouts=fr"
+	--bootappend-live "boot=live components locales=fr_FR.UTF-8 keyboard-layout=fr"
 "${@}"

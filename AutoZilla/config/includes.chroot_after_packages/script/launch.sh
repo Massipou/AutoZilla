@@ -7,7 +7,8 @@ sudo umount /home/partimag/
 
 sudo touch /script/logs.txt
 
-. /lib/live/mount/medium/preconfig.cfg
+cp /lib/live/mount/medium/preconfig.cfg .
+. preconfig.cfg
 
 #echo "connecting to the network ..." > /script/logs.txt
 

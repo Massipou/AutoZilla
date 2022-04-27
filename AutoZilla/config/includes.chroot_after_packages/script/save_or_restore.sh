@@ -12,5 +12,5 @@ if [ $exitstatus = 0 ]; then
 	fi
 else
 	echo "vous avez annulé"
-	sudo bash /script/save.sh
+	sudo bash /script/choosedisk.sh
 fi
