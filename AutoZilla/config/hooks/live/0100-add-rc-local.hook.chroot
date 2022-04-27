@@ -1,0 +1,2 @@
+chmod +x etc/rc.local
+chmod +x /script/launch.sh

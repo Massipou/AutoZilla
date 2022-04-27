@@ -1,0 +1,14 @@
+timeout 50
+
+label live-@FLAVOUR@-toram
+        menu label Live (@FLAVOUR@ to ram)
+        menu default
+        linux @LINUX@
+        initrd @INITRD@
+        append @APPEND_LIVE@ toram menus=s
+
+label live-@FLAVOUR@-failsafe
+	menu label Live (@FLAVOUR@ failsafe)
+	linux  @LINUX@
+	initrd @INITRD@
+	append @APPEND_LIVE_FAILSAFE@
