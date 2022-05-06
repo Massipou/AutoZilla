@@ -38,7 +38,8 @@ echo "machine name: $model" >> /script/logs.txt
 
 echo "get path ... " >> /script/logs.txt
 #path=$(cat /mnt/smb/Utils/path.txt|grep "$model"|sed 's/.*;//g'|sed 's/\r//g')
-path=$(cat /mnt/smb/Utils$db_path|grep "$model"|sed 's/.*;//g'|sed 's/\r//g')
+#path=$(cat /mnt/smb/Utils$db_path|grep "$model"|sed 's/.*;//g'|sed 's/\r//g')
+path=$(cat /mnt/smb/Utils/path.txt|grep "$model;"|sed 's/.*;//g'|sed 's/\r//g')
 echo "path=\"$path\"" >> restore.cfg
 echo "path=$path" >> /script/logs.txt
 if [ $path = "" ]
@@ -47,9 +48,9 @@ then
 else
 	echo "path = $path" >> /script/logs.txt
 	echo "mounting clonezilla files:" >> /script/logs.txt
-	echo "CIFS MOUNT OPTIONS: $shareip$path /home/partimag -o username=guest,password=" >> /script/logs.txt
+	echo "CIFS MOUNT OPTIONS: //$shareip$path /home/partimag -o username=guest,password=" >> /script/logs.txt
 	#sudo mount -t cifs //10.0.1.2$path /home/partimag -o username=guest,password=""
-	sudo mount -t cifs //$shareip$path /home/partimag -o username=guest,password=""
+	sudo mount -t cifs "//$shareip$path" /home/partimag -o username=guest,password=""
 	echo "done" >> /script/logs.txt
 	echo "launch choose disk:" >> /script/logs.txt
 	sudo bash /script/choosedisk.sh
