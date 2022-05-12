@@ -20,7 +20,7 @@ if [ $exitstatus = 0 ]; then
 		username=$(whiptail --title "Login" --inputbox "samba share username :" 10 60 "" 3>&1 1>&2 2>&3)
 		exitstatus=$?
                 if [ $exitstatus = 0 ]; then
-			password=$(whiptail --title "Password" --inputbox "Password:" 10 60 "" 3>&1 1>&2 2>&3)
+			password=$(whiptail --title "Password" --passwordbox "Password:" 10 60 "" 3>&1 1>&2 2>&3)
 			exitstatus=$?
 			if [ $exitstatus = 0 ]; then
 				#MONTAGE DU NAS EN ECRITURE.
