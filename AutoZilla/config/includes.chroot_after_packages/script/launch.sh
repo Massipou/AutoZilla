@@ -45,6 +45,7 @@ echo "path=$path" >> /script/logs.txt
 if [ $path = "" ]
 then
 	echo "/!\\ there is no path for $model in path.txt /!\\" >> /script/logs.txt
+	whiptail --title "Error Message" --msgbox "there is no path for $model in path.txt" 8 78
 else
 	echo "path = $path" >> /script/logs.txt
 	echo "mounting clonezilla files:" >> /script/logs.txt
@@ -53,5 +54,6 @@ else
 	sudo mount -t cifs "//$shareip$path" /home/partimag -o username=guest,password=""
 	echo "done" >> /script/logs.txt
 	echo "launch choose disk:" >> /script/logs.txt
+	sleep 1.5
 	sudo bash /script/choosedisk.sh
 fi

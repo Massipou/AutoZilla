@@ -22,7 +22,10 @@ for i in `seq 0 $((${#disk[@]}-1))`; do
 	n=$n+2
 done
 
-DISK=$(whiptail --title "Choisissez le disque de destination pour $model:" --menu "choose" 16 78 10 "${list[@]}" 3>&1 1>&2 2>&3 )
+title="Choisissez le disque de destination pour $model :
+(Cancel pour recharger la base de donnée)"
+
+DISK=$(whiptail --title "Choisissez le disque de destination pour $model : (Cancel pour recharger la DB)" --menu "choose" 16 100 10 "${list[@]}" 3>&1 1>&2 2>&3 )
 exitstatus=$?
 if [ $exitstatus = 0 ]; then
         echo "User selected Ok and entered " $DISK
