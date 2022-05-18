@@ -1,0 +1,4 @@
+#sudo dpkg-reconfigure keyboard-configuration 
+#udevadm trigger --subsystem-match=input --action=change
+
+sudo nano /etc/default/keyboard
