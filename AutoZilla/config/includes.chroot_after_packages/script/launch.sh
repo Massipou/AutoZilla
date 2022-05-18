@@ -39,7 +39,7 @@ echo "machine name: $model" >> /script/logs.txt
 echo "get path ... " >> /script/logs.txt
 #path=$(cat /mnt/smb/Utils/path.txt|grep "$model"|sed 's/.*;//g'|sed 's/\r//g')
 #path=$(cat /mnt/smb/Utils$db_path|grep "$model"|sed 's/.*;//g'|sed 's/\r//g')
-path=$(cat /mnt/smb/Utils/path.txt|grep "$model;"|sed 's/.*;//g'|sed 's/\r//g')
+path=$(cat /mnt/smb/Utils$db_path|grep "$model;"|sed 's/.*;//g'|sed 's/\r//g')
 echo "path=\"$path\"" >> restore.cfg
 echo "path=$path" >> /script/logs.txt
 if [ $path = "" ]
