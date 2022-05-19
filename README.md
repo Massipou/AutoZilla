@@ -51,7 +51,9 @@ Server must be in read-only for guest. (login: "guest", password: "")
 
 ## Database.
 
-The database is used for get targeted machine's master path for each machine model. (for avoid to write the path each time you want to restore or save)
+The database is used for get targeted machine's master path for each machine model.
+(for avoid to write the path each time you want to restore or save)
+
 one database entry have to be like this:
 
 <code> &lt;model name&gt;;&lt;path to masters&gt; </code>
