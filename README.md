@@ -1,6 +1,6 @@
 # AutoZilla
 Autozilla is an automatised mastering software.
-It save and restore full disk state with clonezilla program but with a minimal and user-friendly GUI.
+It save and restore full disk state with the fusion of CloneZilla and a minimal user-friendly GUI.
 He make mastering easyer by detectecting computer model and display all master have been made for this model.
 
 He work as a bootable usb stick and he get machine masters on a external CIFS server.
