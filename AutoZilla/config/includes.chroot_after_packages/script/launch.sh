@@ -41,7 +41,7 @@ echo "path=$path" >> /script/logs.txt
 if [ $path = ]
 then
 	echo "/!\\ there is no path for $model in path.txt /!\\" >> /script/logs.txt
-	whiptail --title "Error Message" --msgbox "there is no path for \"$model\" in path.txt" 8 78
+	whiptail --title "Error Message" --msgbox "there is no path for \"$model\" in \"$db_path\"" 8 78
 	sudo bash /script/launch.sh
 else
 	echo "path = $path" >> /script/logs.txt

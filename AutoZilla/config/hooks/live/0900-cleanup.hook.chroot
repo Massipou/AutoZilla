@@ -1,0 +1,2 @@
+#!/bin/sh
+rm -f -- /etc/console-setup/cached_*
