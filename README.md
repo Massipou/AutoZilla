@@ -21,6 +21,8 @@ for build it you need a Debian 11 machine.
 <code> lb config </code>
 
 <code> sudo lb build </code>
+
+Build programm will ask you fore a keyboard layout.
   
 ### cleaning build :
 
