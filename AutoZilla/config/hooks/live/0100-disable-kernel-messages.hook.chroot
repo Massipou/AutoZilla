@@ -1,0 +1,2 @@
+sudo sed -i "/kernel.sysrq/s/^#//g" /etc/sysctl.conf
+sudo sed -i "s/kernel.sysrq.*/kernel.sysrq=0 0 0 0/" /etc/sysctl.conf
