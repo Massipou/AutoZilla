@@ -23,6 +23,9 @@ for build it you need a Debian 11 machine.
 <code> sudo lb build </code>
 
 Build programm will ask you fore a keyboard layout.
+
+when finished you will get iso file named autozilla-amd64.hybrid.iso.
+You have to flash it on a USB key. (or maybe use it with PXE)
   
 ### cleaning build :
 
