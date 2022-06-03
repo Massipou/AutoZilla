@@ -28,7 +28,7 @@ LB_BOOTLOADER_EFI=""
 LB_CHECKSUMS="sha256"
 
 # Set compression
-LB_COMPRESSION="none"
+LB_COMPRESSION="bzip2"
 
 # Set zsync
 LB_ZSYNC="true"

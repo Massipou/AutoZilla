@@ -7,6 +7,7 @@ lb config noauto \
 	--debian-installer none \
 	--bootloaders syslinux \
 	--archive-areas "main contrib non-free" \
+	--apt-recommends true \
 	--parent-archive-areas "main contrib non-free" \
 	--parent-mirror-bootstrap "http://deb.debian.org/debian" \
 	--parent-mirror-binary "http://deb.debian.org/debian" \
@@ -19,11 +20,11 @@ lb config noauto \
 	--backports "false" \
 	--binary-images "iso-hybrid" \
 	--apt-indices "true" \
-	--apt-recommends "true" \
 	--apt-secure "true" \
 	--apt-source-archives "false" \
 	--linux-package "linux-image linux-headers" \
 	--firmware-binary "true" \
 	--firmware-chroot "true" \
-	--bootappend-live "boot=live components locales=fr_FR.UTF-8 keyboard-layouts=fr nomodeset"
+	--initramfs-compression "gzip" \
+	--bootappend-live "boot=live components locales=fr_FR.UTF-8 keyboard-layouts=fr nomodeset" \
 "${@}"

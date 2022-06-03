@@ -1,0 +1,22 @@
+#sudo sed -i "s/MODULES=.*/MODULES=dep/" /etc/initramfs-tools/initramfs.conf
+adduser user sudo
+
+sudo apt remove -y acpid aptitude at aspell aspell-en avahi-daemon bc bin86 ca-certificates debian-faq debian-faq-de debian-faq-fr debian-faq-it debian-faq-zh-cn doc-debian eject fdutils finger foomatic-filters gnupg hplip iamerican ibritish info ispell manpages mtr-tiny mutt netcat openssl ppp pppconfig pppoe pppoeconf reportbug tasksel tcsh traceroute unzip vim-common vim-tiny wamerican w3m whois zeroinstall-injector zip firmware-iwlwifi
+
+apt-get purge -y $(aptitude search '~i!~M!~prequired!~pimportant!~R~prequired!~R~R~prequired!~R~pimportant!~R~R~pimportant!busybox!grub!initramfs-tools' | awk '{print $2}')
+apt-get purge -y aptitude
+
+sudo apt-get install -y deborphan
+sudo deborphan --guess-all
+
+sudo rm -rf /usr/share/man/??
+sudo rm -rf /usr/share/man/??_*
+sudo rm -r /etc/alternatives
+
+sudo apt remove --purge -y deborphan
+
+sudo apt-get install -y clonezilla
+sudo apt-get install -y gawk
+sudo apt-get install -y dosfslabel
+sudo apt autoremove -y
+sudo apt clean -y

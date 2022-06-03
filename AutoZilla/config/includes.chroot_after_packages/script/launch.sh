@@ -7,18 +7,22 @@ sudo umount /home/partimag/
 
 sudo touch /script/logs.txt
 
-
-
-cp /lib/live/mount/medium/preconfig.cfg .
 . preconfig.cfg
 
 echo -e "\n Trying connection to share IP \n"
 
-ping -c 1 $shareip
-if [ $? -ne 0 ]; then
-	echo -e "\n Failed. \n"
-	sudo bash /etc/profile.d/launcher.sh
-fi
+checknetwork=true
+while [ "$checknetwork" = true ]
+do
+	ping -c 1 $shareip
+	if [ $? -ne 0 ]; then
+		echo -e "\n Failed. \n"
+		sudo dhclient;
+		sleep 2.5
+	else
+		checknetwork=false
+	fi
+done
 
 echo "done" >> /script/logs.txt
 
